@@ -1,0 +1,13 @@
+.cover-image {
+  width: 1200px;
+  object-fit: cover;
+  margin-left: 160px;
+}
+
+.headline {
+  position: absolute;
+  top: 150px;
+  left: 400px;
+  color: whitesmoke;
+  background-blend-mode: hard-light;
+}
