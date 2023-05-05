@@ -8,6 +8,7 @@ import {
 import Main from './Components/Main/Main.jsx';
 import Home from './Components/Main/Home/Home.jsx';
 import Blog from './Components/Main/Blog/Blog.jsx';
+import RecipeDetails from './Components/Main/RecipeDetails/RecipeDetails.jsx';
 
 // router
 const router = createBrowserRouter([
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/allChefs')
       },
+      {
+        path: ":id",
+        element: <RecipeDetails></RecipeDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/allChefs/${params.id}`)
+      },
+
       {
         path: "home",
         element: <Home></Home>,

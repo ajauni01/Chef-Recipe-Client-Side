@@ -3,6 +3,7 @@ import './ShowEachChef.css'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 const ShowEachChef = ({ everyChef }) => {
@@ -21,7 +22,7 @@ const ShowEachChef = ({ everyChef }) => {
         </Card.Text>
       </Card.Body>
       <Card.Body>
-        <Button className='btn-recipe' variant="success">View Recipes</Button>{' '}
+        <Link to={`/${id}`}> <Button className='btn-recipe' variant="success">View Recipes</Button>{' '}</Link>
 
       </Card.Body>
     </Card>
