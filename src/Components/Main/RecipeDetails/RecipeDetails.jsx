@@ -24,10 +24,10 @@ const RecipeDetails = () => {
             <p>Experience: {yearsOfExperience} years</p>
           </Card.Text>
           <h2 className='mt-5 text-decoration-underline text-danger'>Recipe Info</h2>
-          <h4><span className='text-warning'>Recipe Name:</span> {recipes[0].recipeName}</h4>
-          <h4><span className='text-warning'>Ingredients:</span> {recipes[0].ingredients}</h4>
-          <p><span className='text-warning'>Cooking Method: </span> {recipes[0].cookingMethod}</p>
-          <h4><span className='text-warning'>Rating:</span> {recipes[0].rating}</h4>
+          <h4><span className='text-warning'>Recipe Name:</span> {recipes[0]?.recipeName}</h4>
+          <h4><span className='text-warning'>Ingredients:</span> {recipes[0]?.ingredients}</h4>
+          <p><span className='text-warning'>Cooking Method: </span> {recipes[0]?.cookingMethod}</p>
+          <h4><span className='text-warning'>Rating:</span> {recipes[0]?.rating}</h4>
           <Button variant="dark">Favourite?</Button>{' '}
         </Card.Body>
       </Card>

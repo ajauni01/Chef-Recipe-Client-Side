@@ -12,10 +12,11 @@ import RecipeDetails from './Components/Main/RecipeDetails/RecipeDetails.jsx';
 import AuthProvider from './Components/Main/Providers/AuthProvider.jsx';
 import Register from './Components/Main/Register/Register.jsx';
 import Login from './Components/Main/Login/Login.jsx';
+import ErrorPage from './Components/Main/ErrorPage/ErrorPage.jsx';
 
 // router
 const router = createBrowserRouter([
-  // loader: ({ params }) => fetch(`https://dragon-news-server-ajauni01.vercel.app/news/${params.id}`)
+
   {
     path: "/",
     element: <Main></Main>,
@@ -49,8 +50,13 @@ const router = createBrowserRouter([
         path: "blog",
         element: <Blog></Blog>
       },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
+      },
     ],
   },
+
 ]);
 
 
