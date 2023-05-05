@@ -13,6 +13,9 @@ const Register = () => {
 
   // handle submit function
   const handleSubmit = event => {
+    // prevent the form from going back to the default setting
+    event.preventDefault();
+
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;

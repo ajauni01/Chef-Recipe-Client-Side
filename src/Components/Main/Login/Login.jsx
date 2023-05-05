@@ -15,6 +15,9 @@ const Login = () => {
 
   // handle submit function
   const handleSubmit = event => {
+    // prevent the form from going back to the default setting
+    event.preventDefault();
+
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
@@ -24,7 +27,7 @@ const Login = () => {
       .then(result => {
         // reset the form after a successful execution
         form.reset()
-        navigate(to = "/home")
+        navigate("/home")
       })
       .catch(error => {
         console.error(error.message)

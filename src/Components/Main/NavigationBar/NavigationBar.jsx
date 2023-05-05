@@ -12,8 +12,12 @@ const NavigationBar = () => {
   const { user, logOut } = useContext(AuthContext)
 
   const handleSignOut = () => {
-
-
+    logOut()
+      .then(result => {
+      })
+      .catch(error => {
+        console.error(error.message)
+      })
   }
 
   return (
