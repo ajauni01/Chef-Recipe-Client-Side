@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './NavigationBar.css'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Nav } from 'react-bootstrap';
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { AuthContext } from '../Providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
+  // get the user status through context API
+  const { user } = useContext(AuthContext)
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">GOURMAND</Navbar.Brand>
+        <Navbar.Brand className='' href="/">GOURMAND</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,6 +25,12 @@ const NavigationBar = () => {
             <ActiveLink to="/home" >HOME</ActiveLink>
             <ActiveLink to="/blog">BLOG</ActiveLink>
           </Nav>
+
+          {
+            user ? <>
+              <button className="btn btn-active btn-link">Sign Out</button>
+            </> : <Link to="/login"><button className='btn btn-primary'>Login</button></Link>
+          }
 
         </Navbar.Collapse>
       </Container>
