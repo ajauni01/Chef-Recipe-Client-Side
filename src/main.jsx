@@ -5,17 +5,27 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './Home/Home.jsx';
+import Main from './Components/Main/Main.jsx';
+import Home from './Components/Main/Home/Home.jsx';
+import Blog from './Components/Main/Blog/Blog.jsx';
 
 // router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Main></Main>,
     children: [
       {
         path: "/",
-        element: <div>children</div>,
+        element: <Home></Home>
+      },
+      {
+        path: "/home",
+        element: <Home></Home>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
       },
     ],
   },

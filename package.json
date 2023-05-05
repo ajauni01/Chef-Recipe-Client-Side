@@ -28,5 +28,18 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.2"
-  }
+  },
+  "description": "��#\u0000 \u0000b\u00007\u0000a\u00001\u00000\u0000-\u0000c\u0000h\u0000e\u0000f\u0000-\u0000r\u0000e\u0000c\u0000i\u0000p\u0000e\u0000-\u0000h\u0000u\u0000n\u0000t\u0000e\u0000r\u0000-\u0000c\u0000l\u0000i\u0000e\u0000n\u0000t\u0000-\u0000s\u0000i\u0000d\u0000e\u0000-\u0000a\u0000j\u0000a\u0000u\u0000n\u0000i\u00000\u00001\u0000\r\u0000 \u0000",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-ajauni01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-ajauni01/issues"
+  },
+  "homepage": "https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-ajauni01#readme"
 }

@@ -1,0 +1,15 @@
+.active {
+  color: green;
+  font-size: 50px;
+  text-decoration: none;
+
+
+}
+
+.notActive {
+  color: white;
+  font: bold;
+  font-size: 30px;
+  text-decoration: none;
+  margin-right: 200px !important;
+}
