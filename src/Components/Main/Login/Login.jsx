@@ -11,7 +11,13 @@ const Login = () => {
   // useState to handle error
   const [error, setError] = useState('');
   // destructure the createAccount function
-  const { user, currentUser } = useContext(AuthContext);
+  const { user, currentUser, loading } = useContext(AuthContext);
+  // show the spinner until data is properly fetched
+  if (user === loading) {
+    <div className="spinner-border text-primary" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </div>
+  }
 
   // handle submit function
   const handleSubmit = event => {

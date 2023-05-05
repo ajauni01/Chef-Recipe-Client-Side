@@ -9,7 +9,13 @@ import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   // get the user status through context API
-  const { user, logOut } = useContext(AuthContext)
+  const { user, logOut, loading } = useContext(AuthContext)
+
+  if (user === loading) {
+    <div className="spinner-border text-primary" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </div>
+  }
 
   const handleSignOut = () => {
     logOut()

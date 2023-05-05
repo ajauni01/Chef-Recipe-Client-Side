@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/allChefs')
+        loader: () => fetch('https://chef-recipe-server-side-ajauni01.vercel.app/allChefs')
       },
       {
         path: "/register",
@@ -38,13 +38,13 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <RecipeDetails></RecipeDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/allChefs/${params.id}`)
+        loader: ({ params }) => fetch(`https://chef-recipe-server-side-ajauni01.vercel.app/allChefs/${params.id}`)
       },
 
       {
         path: "home",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/allChefs')
+        loader: () => fetch('https://chef-recipe-server-side-ajauni01.vercel.app/allChefs')
       },
       {
         path: "blog",

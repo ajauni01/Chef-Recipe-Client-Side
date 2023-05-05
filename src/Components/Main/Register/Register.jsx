@@ -9,7 +9,7 @@ const Register = () => {
   // useState to show success
   const [success, setSuccess] = useState('');
   // destructure the createAccount function
-  const { createAccount } = useContext(AuthContext);
+  const { user, createAccount } = useContext(AuthContext);
 
   // handle submit function
   const handleSubmit = event => {
