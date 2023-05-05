@@ -11,7 +11,7 @@ const Register = () => {
   // destructure the createAccount function
   const { createAccount } = useContext(AuthContext);
 
-
+  // handle submit function
   const handleSubmit = event => {
     const form = event.target;
     const email = form.email.value;

@@ -9,7 +9,12 @@ import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   // get the user status through context API
-  const { user } = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
+
+  const handleSignOut = () => {
+
+
+  }
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -28,8 +33,8 @@ const NavigationBar = () => {
 
           {
             user ?
-              <Link to="/register" ><button className="btn btn-active btn-link">Sign Out</button>
-              </Link> :
+              <button onClick={handleSignOut} className="btn btn-active btn-link">Sign Out</button>
+              :
 
               <Link to="/login"><button className='btn btn-primary'>Login</button></Link>
           }
