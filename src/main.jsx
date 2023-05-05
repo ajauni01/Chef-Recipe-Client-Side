@@ -10,6 +10,8 @@ import Home from './Components/Main/Home/Home.jsx';
 import Blog from './Components/Main/Blog/Blog.jsx';
 import RecipeDetails from './Components/Main/RecipeDetails/RecipeDetails.jsx';
 import AuthProvider from './Components/Main/Providers/AuthProvider.jsx';
+import Register from './Components/Main/Register/Register.jsx';
+import Login from './Components/Main/Login/Login.jsx';
 
 // router
 const router = createBrowserRouter([
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/allChefs')
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       },
       {
         path: ":id",
