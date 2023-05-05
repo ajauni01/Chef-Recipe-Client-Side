@@ -11,20 +11,24 @@ import Blog from './Components/Main/Blog/Blog.jsx';
 
 // router
 const router = createBrowserRouter([
+  // loader: ({ params }) => fetch(`https://dragon-news-server-ajauni01.vercel.app/news/${params.id}`)
   {
     path: "/",
     element: <Main></Main>,
     children: [
+      // default path
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/allChefs')
       },
       {
-        path: "/home",
-        element: <Home></Home>
+        path: "home",
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/allChefs')
       },
       {
-        path: "/blog",
+        path: "blog",
         element: <Blog></Blog>
       },
     ],
